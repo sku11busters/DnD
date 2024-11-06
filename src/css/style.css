@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #107abb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.boards {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+  justify-content: center;
+}
+
+.column__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: baseline;
+  width: 300px;
+  background-color: #dee2e5;
+  margin: 0 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.column__title {
+  width: 100%;
+  font-weight: 700;
+  color: #213f50;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+}
+
+.column__title:focus {
+  outline: 1px solid rgba(5, 69, 122, 0.354);
+}
+
+.list {
+  width: 100%;
+  min-height: 30px;
+}
+
+.placeholder {
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.list__item {
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 1px 2px grey;
+  width: 100%;
+  cursor: grab;
+  position: relative;
+}
+
+.delete__item-btn {
+  display: none;
+}
+
+.list__item:hover .delete__item-btn {
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  top: 18%;
+  transform: translateY(-50%);
+  margin-right: 12px;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.list__item:active {
+  cursor: grabbing;
+}
+
+.form {
+  display: none;
+  border-radius: 3px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.textarea {
+  background-color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0 5px 20px 0 #0000003d;
+  font-size: large;
+  margin: 10px 0;
+  padding: 10px;
+  resize: vertical;
+  width: 100%;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add__item-btn {
+  background-color: #5ca84d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: medium;
+  height: 40px;
+  padding: 0, 10px;
+  width: 100px;
+}
+
+.cancel__item-btn {
+  cursor: pointer;
+}
+
+.add__btn {
+  font-size: 14px;
+  margin-right: auto;
+  display: flex;
+  align-items: start;
+  color: grey;
+  cursor: pointer;
+  text-align: left;
+}
